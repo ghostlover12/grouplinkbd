@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Link Cloud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --gold: #f59e0b;
+            --green: #10b981;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+        #top-bar {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(15, 23, 42, 0.98);
+            border-bottom: 2px solid var(--accent);
+            padding: 12px 0; text-align: center; z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6); display: none;
+        }
+        .timer-status { font-size: 15px; font-weight: 600; color: var(--accent); }
+        .countdown-num { color: var(--gold); font-size: 20px; font-weight: bold; margin-left: 5px; }
+        .scroll-msg { 
+            display: none; color: var(--green); font-weight: bold; text-transform: uppercase;
+            animation: pulse 1s infinite; 
+        }
+        @keyframes pulse { 0% { opacity: 0.5; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1); } }
+        .container { max-width: 700px; margin: 0 auto; padding: 90px 20px 40px 20px; }
+        #home-view { display: block; }
+        .link-grid { display: grid; gap: 15px; }
+        .home-card {
+            background: var(--bg-card); padding: 20px; border-radius: 12px;
+            border: 1px solid #334155; display: flex; justify-content: space-between;
+            align-items: center; transition: 0.3s;
+        }
+        .home-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+        .get-btn {
+            background: linear-gradient(90deg, var(--accent), #2563eb); color: white;
+            border: none; padding: 8px 25px; border-radius: 20px; cursor: pointer; font-weight: bold;
+        }
+        #process-view { display: none; }
+        .article-box {
+            background: var(--bg-card); padding: 25px; border-radius: 12px;
+            margin-bottom: 25px; border: 1px solid #334155; text-align: justify;
+            font-size: 15px; color: var(--text-muted);
+        }
+        .article-title {
+            color: white; font-size: 24px; margin-bottom: 20px;
+            border-left: 5px solid var(--accent); padding-left: 15px;
+        }
+        .fake-btn-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 30px 0;
+        }
+        .ad-trap-btn {
+            background: #334155; color: #fff; padding: 15px; text-align: center;
+            border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;
+            border: 1px solid #475569; transition: 0.2s; display: block;
+        }
+        .ad-trap-btn:hover { background: #475569; border-color: var(--gold); color: var(--gold); }
+        .ad-space {
+            background: #020617; color: #64748b; display: flex; align-items: center;
+            justify-content: center; margin: 25px auto; border-radius: 8px;
+            overflow: hidden; border: 1px dashed #444;
+        }
+        .bottom-action {
+            text-align: center; margin-top: 50px; padding-bottom: 50px;
+            border-top: 1px solid #334155; padding-top: 30px;
+        }
+        .real-next-btn {
+            display: none; background: var(--green); color: white; padding: 15px 50px;
+            border-radius: 8px; border: none; font-size: 16px; font-weight: bold;
+            cursor: pointer; text-transform: uppercase;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); animation: bounce 2s infinite;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        .real-next-btn:hover { background: #059669; }
+    </style>
+</head>
+<body>
+
+    <div id="top-bar">
+        <span id="timer-text" class="timer-status">
+            নিরাপত্তা যাচাই করা হচ্ছে: <span id="timer-num" class="countdown-num">30</span> সেকেন্ড
+        </span>
+        <span id="scroll-msg" class="scroll-msg">
+            নিচে স্ক্রল করুন এবং 'CONTINUE' বাটনে ক্লিক করুন 👇
+        </span>
+    </div>
+
+    <div class="container">
+
+        <div id="home-view">
+            <h2 style="text-align: center; color: var(--accent); margin-bottom: 30px;">PREMIUM LINK ZONE</h2>
+            
+            <div class="ad-space" style="height: 90px; width: 100%; max-width: 728px;">
+                
+                ❤️❤️❤️ এখানে Adsterra এর 728x90 বা 320x50 Script কোড বসান ❤️❤️❤️
+            
+            </div>
+
+            <div class="link-grid">
+                <div class="home-card">
+                    <div>
+                        <div style="font-weight: bold; color:white; font-size: 18px;">Viral Videos 2025</div>
+                        <div style="font-size: 13px; color: #94a3b8;">Premium • 100k Members</div>
+                    </div>
+                    <button class="get-btn" onclick="startProcess('❤️❤️❤️ এখানে আপনার টেলিগ্রাম লিংক দিন ❤️❤️❤️')">Open</button>
+                </div>
+                
+                 <div class="home-card">
+                    <div>
+                        <div style="font-weight: bold; color:white; font-size: 18px;">Movie & WebSeries</div>
+                        <div style="font-size: 13px; color: #94a3b8;">HD Quality • 45k Members</div>
+                    </div>
+                    <button class="get-btn" onclick="startProcess('❤️❤️❤️ এখানে আপনার টেলিগ্রাম লিংক দিন ❤️❤️❤️')">Open</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="process-view">
+            
+            <div style="text-align:center; margin-bottom:15px; color: var(--accent); font-weight: bold;">
+                Processing Step <span id="current-step">1</span> of 4
+            </div>
+
+            <div class="article-box">
+                <h3 class="article-title" id="page-title">Loading Title...</h3>
+                <div class="article-text" id="dynamic-text"></div>
+            </div>
+
+            <div class="fake-btn-grid">
+                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">⚡ FAST SERVER 1</a>
+                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">📥 DOWNLOAD HD</a>
+                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">▶ WATCH ONLINE</a>
+                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">🛡️ SECURE VPN</a>
+            </div>
+
+            <div class="ad-space" style="height: 250px; width: 300px;">
+                
+                ❤️❤️❤️ এখানে Adsterra এর 300x250 (Square/Native) Script কোড বসান ❤️❤️❤️
+            
+            </div>
+
+            <div class="article-box">
+                <h4 style="color: white; margin-bottom: 10px;">User Agreement & Policy</h4>
+                <p>আমাদের সার্ভার ব্যবহার করার জন্য আপনাকে ধন্যবাদ। আমরা সর্বদা ব্যবহারকারীর ডেটা সুরক্ষা এবং গোপনীয়তা বজায় রাখি। এই ফাইলটি ডাউনলোড করার আগে সিস্টেম স্বয়ংক্রিয়ভাবে ম্যালওয়্যার স্ক্যান করছে।</p>
+                <p>ইন্টারনেটের গতি এবং সার্ভার লোডের উপর ভিত্তি করে লিংক জেনারেট হতে সামান্য সময় লাগতে পারে। অনুগ্রহ করে ধৈর্য ধরুন এবং নিশ্চিত করুন যে আপনি রোবট নন।</p>
+            </div>
+
+            <div class="ad-space" style="height: 250px; width: 300px;">
+                
+                ❤️❤️❤️ এখানে Adsterra এর 300x250 (Square) Script কোড বসান ❤️❤️❤️
+            
+            </div>
+
+            <div class="bottom-action">
+                <p style="color: #64748b; font-size: 12px; margin-bottom: 10px;">Wait for the timer to finish above...</p>
+                <button id="next-btn" class="real-next-btn" onclick="nextStep()">Continue Next >></button>
+                <a id="final-link-btn" class="real-next-btn" href="#" target="_blank">JOIN CHANNEL NOW</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const times = { step1: 30, step2: 30, step3: 30, final: 5 };
+        const contentData = {
+            1: `<p><strong>সার্ভার সংযোগ স্থাপন করা হচ্ছে (Server Handshake):</strong> আপনার অনুরোধটি আমাদের কেন্দ্রীয় ডেটাবেস সার্ভারে পাঠানো হয়েছে। বর্তমানে আমরা আপনার ডিভাইসের সাথে একটি এনক্রিপ্ট করা সংযোগ তৈরি করার চেষ্টা করছি। যেহেতু আমাদের প্ল্যাটফর্মে প্রতিদিন হাজার হাজার ব্যবহারকারী ভিজিট করেন, তাই ট্রাফিক ম্যানেজমেন্ট সিস্টেমটি অত্যন্ত সতর্কতার সাথে কাজ করে।</p><p>এই প্রক্রিয়াটি আপনার ব্রাউজারের ক্যাশ মেমরি এবং কুকিজ যাচাই করছে যাতে কোনো ডুপ্লিকেট রিকোয়েস্ট না আসে। আধুনিক প্রযুক্তির যুগে ডেটা ট্রান্সমিশন একটি জটিল প্রক্রিয়া, যা নিশ্চিত করে যে আপনি সঠিক ফাইল বা লিংকের দিকেই অগ্রসর হচ্ছেন।</p><p>আমাদের ক্লাউড ফ্লেয়ার (Cloudflare) নিরাপত্তা ব্যবস্থা বর্তমানে আপনার আইপি অ্যাড্রেসটি স্ক্যান করছে। এটি নিশ্চিত করে যে কোনো ক্ষতিকারক বট বা স্প্যামিং সফটওয়্যার আমাদের সিস্টেমের ক্ষতি করতে পারবে না। দয়া করে উপরের টাইমার শেষ হওয়া পর্যন্ত অপেক্ষা করুন।</p>`,
+            2: `<p><strong>ব্যবহারকারী যাচাইকরণ (User Validation):</strong> প্রথম ধাপ সফলভাবে সম্পন্ন হয়েছে। এখন আমাদের সিস্টেম আপনার ব্রাউজিং সেশনটি যাচাই করছে। অনেক সময় ভিপিএন বা প্রক্সি সার্ভার ব্যবহার করার কারণে সংযোগে ধীরগতি দেখা দিতে পারে। আমরা সর্বদা রিয়েল-টাইম ডেটা প্রসেসিং ব্যবহার করি।</p><p>আপনার কাঙ্খিত টেলিগ্রাম গ্রুপ বা ফাইলটি একটি সুরক্ষিত প্রাইভেট সার্ভারে হোস্ট করা আছে। সেই সার্ভার থেকে রেসপন্স পেতে কিছুটা সময় প্রয়োজন। এই ধাপে আমরা নিশ্চিত করছি যে লিংকটি বর্তমানে সক্রিয় (Active) আছে কি না।</p><p>ইন্টারনেট প্রোটোকল (TCP/IP) অনুযায়ী, প্রতিটি রিকোয়েস্ট প্যাকেট আকারে সার্ভারে পৌঁছায়। যদি আপনার ইন্টারনেট সংযোগ অস্থির হয়, তবে চিন্তা করবেন না, আমাদের অটো-রিকানেক্ট ফিচারটি কাজ করবে। অনুগ্রহ করে পেজটি বন্ধ করবেন না বা রিফ্রেশ দেবেন না।</p>`,
+            3: `<p><strong>ফাইল এবং লিংক জেনারেশন (Finalizing Link):</strong> আমরা প্রায় শেষ পর্যায়ে চলে এসেছি। ডেটাবেস থেকে ইউনিক টোকেন (Unique Token) জেনারেট করা হচ্ছে। এই টোকেনটি আপনাকে সরাসরি মূল গন্তব্যে নিয়ে যাবে। নিরাপত্তা প্রোটোকল অনুযায়ী, প্রতিটি লিংক শুধুমাত্র নির্দিষ্ট সময়ের জন্য কার্যকর থাকে।</p><p>আমাদের সিস্টেমে থাকা অ্যান্টি-ভাইরাস এবং ম্যালওয়্যার স্ক্যানার নিশ্চিত করছে যে গন্তব্য লিংকটি আপনার ডিভাইসের জন্য সম্পূর্ণ নিরাপদ। আমরা ব্যবহারকারীর নিরাপত্তার সাথে কোনো আপোষ করি না।</p><p>টাইমার শেষ হওয়ার সাথে সাথে নিচে একটি বাটন দৃশ্যমান হবে। সেই বাটনে ক্লিক করলে আপনি শেষ ধাপে পৌঁছে যাবেন। আমাদের সাথে থাকার জন্য ধন্যবাদ। প্রযুক্তির এই যাত্রায় আমরা আপনাকে সর্বোত্তম সেবা দিতে প্রতিশ্রুতিবদ্ধ।</p>`,
+            4: `<p><strong>অভিনন্দন! (Success):</strong> আপনার লিংকটি সফলভাবে তৈরি হয়েছে। দীর্ঘক্ষণ অপেক্ষা করার জন্য আমরা আন্তরিকভাবে দুঃখিত এবং একই সাথে ধন্যবাদ জানাচ্ছি। আমাদের সার্ভার এখন আপনাকে রিডাইরেক্ট করার জন্য প্রস্তুত।</p><p>নিচে থাকা "JOIN CHANNEL NOW" বাটনটিতে ক্লিক করলেই আপনি আপনার কাঙ্খিত টেলিগ্রাম গ্রুপ বা ফাইলে যুক্ত হতে পারবেন। অনুগ্রহ করে মনে রাখবেন, গ্রুপে জয়েন করার পর গ্রুপের নিয়মাবলী মেনে চলবেন।</p><p>ভবিষ্যতে আরও নতুন নতুন মুভি, গেমস এবং টেক আপডেট পেতে আমাদের এই ওয়েবসাইটটি আপনার ব্রাউজারে বুকমার্ক করে রাখতে পারেন।</p>`
+        };
+
+        let step = 1; let finalUrl = ""; let timerInterval;
+        const topBar = document.getElementById('top-bar');
+        const timerText = document.getElementById('timer-text');
+        const timerNum = document.getElementById('timer-num');
+        const scrollMsg = document.getElementById('scroll-msg');
+        const homeView = document.getElementById('home-view');
+        const processView = document.getElementById('process-view');
+        const nextBtn = document.getElementById('next-btn');
+        const finalLinkBtn = document.getElementById('final-link-btn');
+        const currentStepDisplay = document.getElementById('current-step');
+        const pageTitle = document.getElementById('page-title');
+        const dynamicText = document.getElementById('dynamic-text');
+
+        function startProcess(url) {
+            finalUrl = url; step = 1;
+            homeView.style.display = 'none'; processView.style.display = 'block'; topBar.style.display = 'block';
+            initStep(step);
+        }
+
+        function initStep(s) {
+            window.scrollTo(0, 0);
+            nextBtn.style.display = 'none'; finalLinkBtn.style.display = 'none';
+            timerText.style.display = 'inline'; scrollMsg.style.display = 'none';
+            currentStepDisplay.innerText = s <= 3 ? s : "Final";
+            if (contentData[s]) { dynamicText.innerHTML = contentData[s]; }
+            let time = 0;
+            if(s === 1) { pageTitle.innerText = "Connecting to Server..."; time = times.step1; }
+            else if(s === 2) { pageTitle.innerText = "Verifying User Security..."; time = times.step2; }
+            else if(s === 3) { pageTitle.innerText = "Generating Secure Link..."; time = times.step3; }
+            else { pageTitle.innerText = "Link is Ready!"; time = times.final; }
+            startTimer(time);
+        }
+
+        function startTimer(seconds) {
+            timerNum.innerText = seconds; clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                seconds--; timerNum.innerText = seconds;
+                if (seconds <= 0) { clearInterval(timerInterval); timerFinished(); }
+            }, 1000);
+        }
+
+        function timerFinished() {
+            timerText.style.display = 'none'; scrollMsg.style.display = 'inline-block';
+            if (step < 4) { nextBtn.style.display = 'inline-block'; }
+            else { finalLinkBtn.href = finalUrl; finalLinkBtn.style.display = 'inline-block'; }
+        }
+
+        function nextStep() { step++; if(step <= 4) { initStep(step); } }
+    </script>
+    
+    ❤️❤️❤️ এখানে Adsterra এর Pop-under Script কোড বসান ❤️❤️❤️
+
+</body>
+</html>
