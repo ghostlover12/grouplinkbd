@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -105,10 +106,8 @@
             <h2 style="text-align: center; color: var(--accent); margin-bottom: 30px;">PREMIUM LINK ZONE</h2>
             
             <div class="ad-space" style="height: 90px; width: 100%; max-width: 728px;">
-                
-                ❤️❤️❤️ এখানে Adsterra এর 728x90 বা 320x50 Script কোড বসান ❤️❤️❤️
-            
-            </div>
+                <p>Top Banner Ad Place</p>
+                </div>
 
             <div class="link-grid">
                 <div class="home-card">
@@ -116,7 +115,7 @@
                         <div style="font-weight: bold; color:white; font-size: 18px;">Viral Videos 2025</div>
                         <div style="font-size: 13px; color: #94a3b8;">Premium • 100k Members</div>
                     </div>
-                    <button class="get-btn" onclick="startProcess('❤️❤️❤️ এখানে আপনার টেলিগ্রাম লিংক দিন ❤️❤️❤️')">Open</button>
+                    <button class="get-btn" onclick="startProcess('https://t.me/YOUR_TELEGRAM_LINK_1')">Open</button>
                 </div>
                 
                  <div class="home-card">
@@ -124,7 +123,7 @@
                         <div style="font-weight: bold; color:white; font-size: 18px;">Movie & WebSeries</div>
                         <div style="font-size: 13px; color: #94a3b8;">HD Quality • 45k Members</div>
                     </div>
-                    <button class="get-btn" onclick="startProcess('❤️❤️❤️ এখানে আপনার টেলিগ্রাম লিংক দিন ❤️❤️❤️')">Open</button>
+                    <button class="get-btn" onclick="startProcess('https://t.me/YOUR_TELEGRAM_LINK_2')">Open</button>
                 </div>
             </div>
         </div>
@@ -141,17 +140,15 @@
             </div>
 
             <div class="fake-btn-grid">
-                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">⚡ FAST SERVER 1</a>
-                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">📥 DOWNLOAD HD</a>
-                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">▶ WATCH ONLINE</a>
-                <a href="❤️❤️❤️ এখানে ডাইরেক্ট লিংক বসান ❤️❤️❤️" target="_blank" class="ad-trap-btn">🛡️ SECURE VPN</a>
+                <a href="#" target="_blank" class="ad-trap-btn">⚡ FAST SERVER 1</a>
+                <a href="#" target="_blank" class="ad-trap-btn">📥 DOWNLOAD HD</a>
+                <a href="#" target="_blank" class="ad-trap-btn">▶ WATCH ONLINE</a>
+                <a href="#" target="_blank" class="ad-trap-btn">🛡️ SECURE VPN</a>
             </div>
 
             <div class="ad-space" style="height: 250px; width: 300px;">
-                
-                ❤️❤️❤️ এখানে Adsterra এর 300x250 (Square/Native) Script কোড বসান ❤️❤️❤️
-            
-            </div>
+                <p>Square Ad Place</p>
+                </div>
 
             <div class="article-box">
                 <h4 style="color: white; margin-bottom: 10px;">User Agreement & Policy</h4>
@@ -160,10 +157,8 @@
             </div>
 
             <div class="ad-space" style="height: 250px; width: 300px;">
-                
-                ❤️❤️❤️ এখানে Adsterra এর 300x250 (Square) Script কোড বসান ❤️❤️❤️
-            
-            </div>
+                <p>Bottom Ad Place</p>
+                 </div>
 
             <div class="bottom-action">
                 <p style="color: #64748b; font-size: 12px; margin-bottom: 10px;">Wait for the timer to finish above...</p>
@@ -233,7 +228,7 @@
         function nextStep() { step++; if(step <= 4) { initStep(step); } }
     </script>
     
-    ❤️❤️❤️ এখানে Adsterra এর Pop-under Script কোড বসান ❤️❤️❤️
+    <script src="https://pl28386278.effectivegatecpm.com/5c/e7/81/5ce781e8f3b9b7922cf4c398c8491fd5.js"></script>
 
 </body>
 </html>
